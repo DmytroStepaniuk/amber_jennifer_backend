@@ -23,9 +23,25 @@ Amber::Server.configure do |app|
   end
 
   routes :web do
+
     get "/", HomeController, :index
   end
 
+  pipeline :api do
+    plug Amber::Pipe::PoweredByAmber.new
+    # plug Amber::Pipe::ClientIp.new(["X-Forwarded-For"])
+    plug Citrine::I18n::Handler.new
+    plug Amber::Pipe::Error.new
+    plug Amber::Pipe::Logger.new
+  end
+
+  routes :api do
+    post "/api/users", UsersController, :create
+  end
+
+  #
+  # => should be at the end of the list
+  #
   routes :static do
     # Each route is defined as follow
     # verb resource : String, controller : Symbol, action : Symbol
