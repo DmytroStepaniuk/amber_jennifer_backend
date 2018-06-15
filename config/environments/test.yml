@@ -1,0 +1,36 @@
+secret_key_base: zffVhjbMfH5REa0u1tuKItfzRI8rdG5jFZ4EoA-FlYo
+port: 3000
+name: amber_backend
+logging:
+  severity: debug
+  colorize: true
+  filter:
+    - password
+    - confirm_password
+  skip:
+    -
+  context:
+    - request
+    - session
+    - headers
+    - cookies
+    - params
+
+host: 0.0.0.0
+port_reuse: false
+process_count: 1
+# ssl_key_file:
+# ssl_cert_file:
+redis_url: "redis://localhost:6379"
+database_url: postgres://postgres:@localhost:5432/amber_backend_test
+session:
+  key: amber.session
+  store: signed_cookie
+  expires: 0
+smtp:
+  enabled: false
+
+secrets:
+  description: Store your development secrets credentials and settings here.
+
+
