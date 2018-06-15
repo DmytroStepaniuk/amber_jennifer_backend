@@ -1,5 +1,9 @@
 version: 1.0
 shards:
+  accord:
+    github: neovintage/accord
+    version: 1.1.0
+
   amber:
     github: amberframework/amber
     version: 0.7.2
@@ -44,6 +48,10 @@ shards:
     github: TechMagister/i18n.cr
     version: 0.1.0
 
+  ifrit:
+    github: imdrasil/ifrit
+    version: 0.1.2
+
   inflector:
     github: phoffer/inflector.cr
     version: 0.1.8
@@ -51,6 +59,10 @@ shards:
   jasper_helpers:
     github: amberframework/jasper-helpers
     version: 0.2.0
+
+  jennifer:
+    github: imdrasil/jennifer.cr
+    version: 0.5.1
 
   kilt:
     github: jeromegn/kilt
@@ -80,6 +92,10 @@ shards:
     github: stefanwille/crystal-redis
     version: 1.9.0
 
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.2.4
+
   selenium:
     github: ysbaddaden/selenium-webdriver-crystal
     version: 0.3.0
@@ -103,4 +119,8 @@ shards:
   teeplate:
     github: amberframework/teeplate
     version: 0.5.0
+
+  time_zone:
+    github: imdrasil/time_zone
+    version: 0.1.1
 

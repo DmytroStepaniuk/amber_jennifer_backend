@@ -1,0 +1,10 @@
+defaults : &defaults
+  host: localhost
+  adapter: postgres
+  user: ZSMR
+  # password:
+  migration_files_path: db/migrations
+
+development:
+  db: crystal_backend
+  <<: *defaults

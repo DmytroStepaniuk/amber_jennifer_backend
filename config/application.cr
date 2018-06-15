@@ -3,6 +3,7 @@ require "./initializers/**"
 require "amber"
 
 require "../src/controllers/application_controller"
+
 require "../src/controllers/**"
 
 # About Application.cr File
