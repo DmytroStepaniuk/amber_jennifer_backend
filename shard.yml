@@ -44,6 +44,9 @@ dependencies:
   jennifer:
     github: imdrasil/jennifer.cr
 
+  time_zone:
+    github: imdrasil/time_zone
+
   sam:
     github: imdrasil/sam.cr
 

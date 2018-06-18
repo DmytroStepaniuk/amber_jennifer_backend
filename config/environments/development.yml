@@ -6,6 +6,7 @@ logging:
   colorize: true
   filter:
     - password
+    - password_confirmation
     - confirm_password
   skip:
     -

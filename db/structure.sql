@@ -75,6 +75,7 @@ CREATE TABLE public.users (
     id integer NOT NULL,
     name character varying(254),
     email character varying(254),
+    password_digest character varying(254),
     created_at timestamp without time zone,
     updated_at timestamp without time zone
 );
@@ -87,7 +88,6 @@ ALTER TABLE public.users OWNER TO "ZSMR";
 --
 
 CREATE SEQUENCE public.users_id_seq
-    AS integer
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -98,10 +98,25 @@ CREATE SEQUENCE public.users_id_seq
 ALTER TABLE public.users_id_seq OWNER TO "ZSMR";
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ZSMR
+-- Name: users_id_seq1; Type: SEQUENCE; Schema: public; Owner: ZSMR
 --
 
-ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
+CREATE SEQUENCE public.users_id_seq1
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.users_id_seq1 OWNER TO "ZSMR";
+
+--
+-- Name: users_id_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: ZSMR
+--
+
+ALTER SEQUENCE public.users_id_seq1 OWNED BY public.users.id;
 
 
 --
@@ -115,7 +130,7 @@ ALTER TABLE ONLY public.migration_versions ALTER COLUMN id SET DEFAULT nextval('
 -- Name: users id; Type: DEFAULT; Schema: public; Owner: ZSMR
 --
 
-ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
+ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq1'::regclass);
 
 
 --
