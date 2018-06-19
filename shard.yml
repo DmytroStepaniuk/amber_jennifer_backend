@@ -43,6 +43,7 @@ dependencies:
 
   jennifer:
     github: imdrasil/jennifer.cr
+    branch: v0.6.0
 
   time_zone:
     github: imdrasil/time_zone

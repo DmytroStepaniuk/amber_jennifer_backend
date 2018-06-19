@@ -1,9 +1,5 @@
 version: 1.0
 shards:
-  accord:
-    github: neovintage/accord
-    version: 1.1.0
-
   amber:
     github: amberframework/amber
     version: 0.7.2
@@ -62,7 +58,7 @@ shards:
 
   jennifer:
     github: imdrasil/jennifer.cr
-    version: 0.5.1
+    commit: 
 
   kilt:
     github: jeromegn/kilt
